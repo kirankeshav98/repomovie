@@ -1,0 +1,14 @@
+{% extends 'base.html' %}
+{% block body %}
+<div class="card text-center my-3" style="width: 18rem; margin-left:500px">
+  <img src="{{film.img.url}}" class="card-img-top" alt="...">
+  <div class="card-body bg-light">
+    <h5 class="card-title"><u>{{film.name}}</u></h5>
+    <p class="card-text">{{film.desc}}</p>
+    <p class="card-text"><em>Year of Release:</em>{{film.year}}</p>
+    <a href="{% url 'movieapp:update' film.id %}" class="btn btn-primary text-center">Update</a>
+    <a href="{% url 'movieapp:delete' film.id %}" class="btn btn-danger text-center">Delete</a>
+  </div>
+</div>
+
+{% endblock %}

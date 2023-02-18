@@ -1,0 +1,10 @@
+{% extends 'base.html' %}
+{% block body %}
+<form action="" method="POST" enctype="multipart/form-data">
+    {% csrf_token %}
+    <div class="text-center">
+        <p>Are you sure to delete this Movie?</p>
+        <input type="submit">
+    </div>
+</form>
+{% endblock %}
